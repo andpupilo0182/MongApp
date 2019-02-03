@@ -5,7 +5,7 @@ from flask_pymongo import PyMongo
 
 app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'appdata'
-app.config['MONGO_URI'] = 'mongodb://172.17.0.2:27017/appdata'
+app.config['MONGO_URI'] = 'mongodb://mongodb:27017/appdata'
 mongo = PyMongo(app)
 
 #lista todos os usuarios do mongodb

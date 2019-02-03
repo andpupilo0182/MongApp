@@ -1,4 +1,4 @@
-# MongApp
+# MongApp com Docker
 
 ![Pytohn + MongoDB](https://i.ytimg.com/vi/qd1Ihy_djDc/maxresdefault.jpg)
 
@@ -41,9 +41,9 @@ Clone este repositório
 
 Use o gerenciador de pacotes [pip](https://pip.pypa.io/en/stable/) para instalar as dependências necessárias.
 
+Efetue o deploy da imagem usando o Dockerfile.
 ```bash
-pip install -r requirements.txt
-python app.py &
+ docker build -t mongapp .
 ```
 Execute um contêiner de Mongodb.
 
@@ -57,6 +57,12 @@ mongo mongodb://localhost
 use appdata
 db.createCollection("usuarios")
 CTRL + D
+```
+
+Agora efetue o deploy do container da aplicação fazendo um link com o container do mongo criado anteriormente.
+```bash
+docker run -dti --name mongapp --hostname mongapp --link mongodb:mongodb mongapp
+docker ps
 ```
 
 ## Usando a API
