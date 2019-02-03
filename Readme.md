@@ -3,7 +3,21 @@
 ![Pytohn + MongoDB](https://i.ytimg.com/vi/qd1Ihy_djDc/maxresdefault.jpg)
 
 Esta aplicação é somente um exemplo de API Flask com persistência de dados no MongoDB.
-Ela usa os métodos GET e POST para interagir com o banco de dados.
+Ela usa os métodos GET e POST para interagir com o banco de dados, Foi criada somente para a resolução de um desafio em uma startup.
+
+Payload para cadastro:
+{
+"nome": "Andre",
+"sobrenome": "Ferreira",
+"email": "faker email",
+"password": "faker password",
+"defaultLanguage": "faker defaultLanguage",
+"dataNascimento": "faker nascimento",
+"endereco": "faker endereco",
+"areasInteresse": "faker areasInteresse",
+"escola": "faker escola",
+"statusEscola": "faker statusEscola"
+}
 
 
 ## Preparando seu ambiente
